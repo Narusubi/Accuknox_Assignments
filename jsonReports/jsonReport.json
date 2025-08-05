@@ -1,0 +1,405 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\playwright.config.ts",
+    "rootDir": "C:/Users/revat/AccuKnox_Project_Playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonReports/jsonReport.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/revat/AccuKnox_Project_Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/revat/AccuKnox_Project_Playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/userManagement.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests\\userManagement.spec.ts",
+      "file": "tests/userManagement.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Management E2E - OrangeHRM",
+          "file": "tests/userManagement.spec.ts",
+          "line": 20,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Add a New User",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 17794,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n    at DashboardPage.goToAdmin (C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts:20:23)\n    at C:\\Users\\revat\\AccuKnox_Project_Playwright\\tests\\userManagement.spec.ts:30:5",
+                        "location": {
+                          "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                          "column": 23,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mpages\\dashboard.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       \u001b[90m// Wait for the admin page to load\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(\u001b[32m'**/admin/viewSystemUsers'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h6:has-text(\"System Users\")'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'goToAdmin_failure.png'\u001b[39m\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                            "column": 23,
+                            "line": 20
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages\\dashboard.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       \u001b[90m// Wait for the admin page to load\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(\u001b[32m'**/admin/viewSystemUsers'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h6:has-text(\"System Users\")'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'goToAdmin_failure.png'\u001b[39m\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at DashboardPage.goToAdmin (C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts:20:23)\u001b[22m\n\u001b[2m    at C:\\Users\\revat\\AccuKnox_Project_Playwright\\tests\\userManagement.spec.ts:30:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Failed to go to Admin page: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n    at DashboardPage.goToAdmin \u001b[90m(C:\\Users\\revat\\AccuKnox_Project_Playwright\\\u001b[39mpages\\dashboard.ts:20:23\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\revat\\AccuKnox_Project_Playwright\\\u001b[39mtests\\userManagement.spec.ts:30:5 {\n  name: \u001b[32m'TimeoutError'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@20'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\pages\\\\dashboard.ts'\u001b[39m,\n      line: \u001b[33m20\u001b[39m,\n      column: \u001b[33m23\u001b[39m,\n      function: \u001b[32m'DashboardPage.goToAdmin'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m`Wait for selector locator('h6:has-text(\"System Users\")')`\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'h6:has-text(\"System Users\")'\u001b[39m, timeout: \u001b[33m10000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@20'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754382820623\u001b[39m,\n    error: {\n      message: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at DashboardPage.goToAdmin (C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\pages\\\\dashboard.ts:20:23)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\tests\\\\userManagement.spec.ts:30:5'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-08-05T08:33:23.277Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--c89ba----OrangeHRM-Add-a-New-User\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--c89ba----OrangeHRM-Add-a-New-User\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--c89ba----OrangeHRM-Add-a-New-User\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                        "column": 23,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "46710bd7f7f3d0299264-7e58063a7ee1b25a7180",
+              "file": "tests/userManagement.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "Search the Newly Created User",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 16779,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n    at DashboardPage.goToAdmin (C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts:20:23)\n    at C:\\Users\\revat\\AccuKnox_Project_Playwright\\tests\\userManagement.spec.ts:38:5",
+                        "location": {
+                          "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                          "column": 23,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mpages\\dashboard.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       \u001b[90m// Wait for the admin page to load\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(\u001b[32m'**/admin/viewSystemUsers'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h6:has-text(\"System Users\")'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'goToAdmin_failure.png'\u001b[39m\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                            "column": 23,
+                            "line": 20
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages\\dashboard.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       \u001b[90m// Wait for the admin page to load\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(\u001b[32m'**/admin/viewSystemUsers'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h6:has-text(\"System Users\")'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'goToAdmin_failure.png'\u001b[39m\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at DashboardPage.goToAdmin (C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts:20:23)\u001b[22m\n\u001b[2m    at C:\\Users\\revat\\AccuKnox_Project_Playwright\\tests\\userManagement.spec.ts:38:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Failed to go to Admin page: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n    at DashboardPage.goToAdmin \u001b[90m(C:\\Users\\revat\\AccuKnox_Project_Playwright\\\u001b[39mpages\\dashboard.ts:20:23\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\revat\\AccuKnox_Project_Playwright\\\u001b[39mtests\\userManagement.spec.ts:38:5 {\n  name: \u001b[32m'TimeoutError'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@20'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\pages\\\\dashboard.ts'\u001b[39m,\n      line: \u001b[33m20\u001b[39m,\n      column: \u001b[33m23\u001b[39m,\n      function: \u001b[32m'DashboardPage.goToAdmin'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m`Wait for selector locator('h6:has-text(\"System Users\")')`\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'h6:has-text(\"System Users\")'\u001b[39m, timeout: \u001b[33m10000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@20'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754382838770\u001b[39m,\n    error: {\n      message: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at DashboardPage.goToAdmin (C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\pages\\\\dashboard.ts:20:23)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\tests\\\\userManagement.spec.ts:38:5'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-08-05T08:33:42.294Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--0591c-arch-the-Newly-Created-User\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--0591c-arch-the-Newly-Created-User\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--0591c-arch-the-Newly-Created-User\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                        "column": 23,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "46710bd7f7f3d0299264-7d8b7988f38e3f9fdca5",
+              "file": "tests/userManagement.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "Edit User Details",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 16754,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n    at DashboardPage.goToAdmin (C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts:20:23)\n    at C:\\Users\\revat\\AccuKnox_Project_Playwright\\tests\\userManagement.spec.ts:46:5",
+                        "location": {
+                          "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                          "column": 23,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mpages\\dashboard.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       \u001b[90m// Wait for the admin page to load\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(\u001b[32m'**/admin/viewSystemUsers'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h6:has-text(\"System Users\")'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'goToAdmin_failure.png'\u001b[39m\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                            "column": 23,
+                            "line": 20
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages\\dashboard.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       \u001b[90m// Wait for the admin page to load\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(\u001b[32m'**/admin/viewSystemUsers'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h6:has-text(\"System Users\")'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'goToAdmin_failure.png'\u001b[39m\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at DashboardPage.goToAdmin (C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts:20:23)\u001b[22m\n\u001b[2m    at C:\\Users\\revat\\AccuKnox_Project_Playwright\\tests\\userManagement.spec.ts:46:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Failed to go to Admin page: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n    at DashboardPage.goToAdmin \u001b[90m(C:\\Users\\revat\\AccuKnox_Project_Playwright\\\u001b[39mpages\\dashboard.ts:20:23\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\revat\\AccuKnox_Project_Playwright\\\u001b[39mtests\\userManagement.spec.ts:46:5 {\n  name: \u001b[32m'TimeoutError'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@20'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\pages\\\\dashboard.ts'\u001b[39m,\n      line: \u001b[33m20\u001b[39m,\n      column: \u001b[33m23\u001b[39m,\n      function: \u001b[32m'DashboardPage.goToAdmin'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m`Wait for selector locator('h6:has-text(\"System Users\")')`\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'h6:has-text(\"System Users\")'\u001b[39m, timeout: \u001b[33m10000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@20'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754382856694\u001b[39m,\n    error: {\n      message: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at DashboardPage.goToAdmin (C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\pages\\\\dashboard.ts:20:23)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\tests\\\\userManagement.spec.ts:46:5'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-08-05T08:34:00.273Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--1a0ab-OrangeHRM-Edit-User-Details\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--1a0ab-OrangeHRM-Edit-User-Details\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--1a0ab-OrangeHRM-Edit-User-Details\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                        "column": 23,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "46710bd7f7f3d0299264-5f141ec89e6c03d770c9",
+              "file": "tests/userManagement.spec.ts",
+              "line": 43,
+              "column": 7
+            },
+            {
+              "title": "Delete the User",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 17174,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n    at DashboardPage.goToAdmin (C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts:20:23)\n    at C:\\Users\\revat\\AccuKnox_Project_Playwright\\tests\\userManagement.spec.ts:54:5",
+                        "location": {
+                          "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                          "column": 23,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mpages\\dashboard.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       \u001b[90m// Wait for the admin page to load\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(\u001b[32m'**/admin/viewSystemUsers'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h6:has-text(\"System Users\")'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'goToAdmin_failure.png'\u001b[39m\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                            "column": 23,
+                            "line": 20
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages\\dashboard.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m       \u001b[90m// Wait for the admin page to load\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForURL(\u001b[32m'**/admin/viewSystemUsers'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'h6:has-text(\"System Users\")'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m \u001b[32m'goToAdmin_failure.png'\u001b[39m\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at DashboardPage.goToAdmin (C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts:20:23)\u001b[22m\n\u001b[2m    at C:\\Users\\revat\\AccuKnox_Project_Playwright\\tests\\userManagement.spec.ts:54:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Failed to go to Admin page: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\u001b[22m\n\n    at DashboardPage.goToAdmin \u001b[90m(C:\\Users\\revat\\AccuKnox_Project_Playwright\\\u001b[39mpages\\dashboard.ts:20:23\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\revat\\AccuKnox_Project_Playwright\\\u001b[39mtests\\userManagement.spec.ts:54:5 {\n  name: \u001b[32m'TimeoutError'\u001b[39m,\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@20'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\pages\\\\dashboard.ts'\u001b[39m,\n      line: \u001b[33m20\u001b[39m,\n      column: \u001b[33m23\u001b[39m,\n      function: \u001b[32m'DashboardPage.goToAdmin'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m`Wait for selector locator('h6:has-text(\"System Users\")')`\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'h6:has-text(\"System Users\")'\u001b[39m, timeout: \u001b[33m10000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@20'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754382875092\u001b[39m,\n    error: {\n      message: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('h6:has-text(\"System Users\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at DashboardPage.goToAdmin (C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\pages\\\\dashboard.ts:20:23)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\revat\\\\AccuKnox_Project_Playwright\\\\tests\\\\userManagement.spec.ts:54:5'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-08-05T08:34:18.254Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--cd7e0---OrangeHRM-Delete-the-User\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--cd7e0---OrangeHRM-Delete-the-User\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\test-results\\tests-userManagement-User--cd7e0---OrangeHRM-Delete-the-User\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\revat\\AccuKnox_Project_Playwright\\pages\\dashboard.ts",
+                        "column": 23,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "46710bd7f7f3d0299264-6e33cc5fbcfdc7c0d154",
+              "file": "tests/userManagement.spec.ts",
+              "line": 51,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-05T08:33:22.413Z",
+    "duration": 73443.206,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}
